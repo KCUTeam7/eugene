@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>Backgrounds</title>
+    <style>
+        .div{
+            width: 500px;
+            height: 500px;
+            border: 100px double red;
+            color: #fff;
+            margin: 100px auto;
+            /* if size of image exceeds the box, it will be clipped in the border */
+            background-image: url("img/image.jpg");
+            background-size: 200px;
+            background-repeat: no-repeat; /* no-repeat, repeat-x, repeat-y */
+            /* background-position: -50px -50px; */ /* move background 50px left, 50px up */
+            /* background-position: right bottom; */ /* starting point will be bottom right corner (default is top left) */
+            background-position: 50% 50%; /* clipped parts at left and right, top and bottom are equal; image centered in the box 
+            same result as background-position: center */
+            background-attachment: fixed; /* values of background-position property work accoridng to the viewport */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>

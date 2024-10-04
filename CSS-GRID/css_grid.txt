@@ -1,0 +1,15 @@
+can use flexbox and grid together
+flexbox: 1d layout module
+grid: 2d layout
+
+set property of grid container
+display: grid || grid-inline
+    - 
+
+Grid container and grid items
+- row axis horizontal, colum axis vertical direction
+- grid lines: horizontal and vertical lines that divide grid
+- grid gutter (gap): gap between rows and cols
+- grid track
+    - horizonal grid track: row
+    - vertical grid track: col

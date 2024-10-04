@@ -1,0 +1,52 @@
+floats: getting less popular, inconvinient
+nowadays we use css flexbox and grid to align elements
+
+CSS Flexbox Layout Module
+- improves the way of layout, fully supported in modern browswers
+- alignment of items, directions and order in the container
+- Flex container and Flex items
+    - in order to make container flexible we need to set display property as flex or inline-flex
+    - as soon as the container gets to display flex, it has influence on its child items
+- directions on how elements are layed out
+    - main axis: left to right
+    - cross axis: top to bottom
+    these directions could be changed
+
+
+Flexbox
+- Flex container
+    - display: flex || inline-flex 
+        - inline-flex: container behaves like in-line element; takes up the width as much as its required to display its content
+    - flex-direction: row || row-reverse | column | column-reverse
+        - row-reverse: main axis reversed
+        - column: place items in column; main axis from top to bottom, cross axis from left to right
+    - flex-wrap: nowrap || wrap
+    - flex-flow: row wrap
+    - justify-content: flex-start || flex-end...
+        - center: items placed in the center of container
+        - space-between: first and last items placed on the edge and rest with equal spaces
+        - space-around: each elements takes the equal spaces on left and right sides
+        - space-evenly: equal space between items
+    - align-items: stretch || flex-start...
+        - stretch: items stretch along cross axis 
+        - flex-start: items placed at the top edge of container
+        - baseline: texts in items placed in imaginary line
+    - align-content: stretch || flex-start...
+        align contents when viewport is shrunk
+- Flex items
+    - order: 0 || (number)
+        - helps ordering itmes in row/col without changing html code
+        - lower order stands infront of other items
+    - align-self: auto || stretch...
+        - allows to align individual flex items
+        - flex-start: item placed on top
+    - flex-grow: 0 || (number)
+        - item starts to grow as viewport grows
+        - larger number grows faster
+    - flex-basis: auto || (length)
+        - sets the size of width / height (works depending on main axis)
+        - when we use width and flex-basis simultaneously, width is overwritten by flex-basis (assuming flex-direction is row)
+    - flex-shrink: 1 || (number)
+        - item starts to shrink as viewport shrinks
+        - flex-wrap should ne nowrap because wrap doesn't allow item to shrink
+    allows to change size of flex items, define width, manage shrinking items etc

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* set body of block level element to 0 from default 8px */
+        body {
+            margin: 0;
+        }
+
+        h1{
+            /* border-width: 5px;
+            border-style: solid;
+            border-color: #f00; */
+            border: 5px #f00 solid;
+            /* padding-top: 30px;
+            padding-right: 50px;
+            padding-bottom: 70px;
+            padding-left: 90px; */
+            /* padding: 30px 50px 70px 90px; */ /* top, right, bottom, left */
+            /* padding: 50px 100px; */ /* top and bottom 50px, left and right 100px */
+            padding: 100px; /* all four sides */
+            /* margin-top: 50px;
+            margin-right: 100px;
+            margin-bottom: 150px;
+            margin-left: 200px; */
+            /* margin: 50px 100px 150px 200px; */
+            margin: 100px auto; /* 100px for tom and bottom, auto for left and right*/
+            width: 300px;
+            height: 300px;
+            /* padding and border is not included in the total width and height*/
+            /* box-sizing: content-box;  */
+            /* padding and border will be included in the total width and height*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box model</h1>
+</body>
+</html>

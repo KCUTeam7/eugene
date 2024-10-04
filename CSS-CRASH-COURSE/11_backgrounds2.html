@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>Backgrounds</title>
+    <style>
+        .div{
+            width: 400px;
+            height: 400px;
+            border: 100px double red;
+            color: #fff;
+            margin: 100px auto;
+            /* background-image: url("img/image.jpg");
+            background-repeat: no-repeat;  */
+            /* background-size: 300px auto */ /* width is 300px and broswer will automatically size its height so the image is not compressed*/
+            /* background-size: 50% */ /* image will be half the width of an element */
+            /* background-size: cover; */ /* cover entire element without compressing image. part of image can be clipped but element will always be covered */
+            /* background-origin: content-box; */ /* image starts displaying after padding */
+            /* background-origin: border-box; */ /* image starts displaying from upper left corner of border */
+            /* background-clip: border-box; */ /* image starts displaying from upper left corner of inside edge of border */
+            /* background-clip: padding-box; */ /* image starts displaying from upper left corner of outside edge of padding*/
+            /* background-clip: content-box; */ /* image starts displaying from upper left corner of inside edge of padding*/
+
+            /* background: green url("img/image.jpg") no-repeat center fixed /cover; */
+            background: url("img/image.jpg") left top no-repeat /300px, url("img/image.jpg") right bottom no-repeat /300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+p {
+    /* property-value pairs are called css declarations */
+    /* for each declaration we need to place semicolons */
+    background-color: blue;
+    color: white;
+}

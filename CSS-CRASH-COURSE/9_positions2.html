@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions 2</title>
+    <style>
+        .container{
+            background-color: orangered;
+            width: 700px;
+            height: 600px;
+            /* container will maintain its fixed position in the viewport (e.g. as we scroll down) */
+            /* position: fixed; 
+            top: 200px;
+            left: 150px; */
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            font-size: 25px;
+            color: #fff;
+        }
+        .box-1{
+            background-color: green;
+            position: absolute;
+            /* 0px gap to the bottom of container (closest parent element) If the position of container is set as static, it will move according to the body element; 0px gap to the bottom of body*/
+            top: 50px;
+            left: 200px;
+            z-index: 500;
+        }
+        .box-2{
+            background-color: royalblue;
+            /* z-index: 10; */ /* higher value will be on top of lower value element*/
+            /* position: relative; */ /* set position to relative to make z-index work */
+            position: sticky;
+            /* remain sticked to the top of the page with 30px margin as we scroll and remain until container (parent element) is out of sight */
+            top: 30px;
+        }
+        .box-3{
+            background-color: grey;
+            /* position: relative;
+            z-index: 100; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque architecto dolore illum, culpa et unde vero, dicta, beatae quidem commodi officia impedit fugiat sequi. Dolores aliquid dolore quos quam, enim eius architecto quae sint repellendus, asperiores laborum aliquam ratione harum ipsa quod voluptatum veniam perspiciatis beatae similique nesciunt officia incidunt in? Odio ipsa voluptatum officia adipisci ad quam qui mollitia, illo minus, doloremque repudiandae rem aspernatur! Tempora corporis laudantium suscipit ipsam quibusdam. Inventore repudiandae consequatur, rerum delectus debitis voluptatibus ratione, earum laborum asperiores temporibus, nulla fuga doloribus. Et eius consequatur distinctio porro sequi corrupti corporis. Amet cumque explicabo eius! Ducimus cum at in. Reprehenderit, ut velit? Cumque necessitatibus assumenda aliquam, similique amet dolor recusandae ipsam voluptas? Sunt maiores explicabo, non velit sequi mollitia quas nesciunt, corrupti voluptates officiis nulla aspernatur laudantium tempore consequuntur voluptas minima, magni illum laboriosam totam! A quisquam minus voluptatem? Tempora sit repellendus dolores recusandae id perferendis qui eum autem porro provident minima adipisci ut nihil, quasi eligendi aspernatur corrupti ipsa saepe quam dicta alias! Quas, vel. Illum adipisci maxime nihil commodi fugiat, tempora placeat distinctio iusto libero ratione explicabo! Vero fuga rem consectetur perspiciatis est ipsam sint vel. Repellendus cum nisi sequi praesentium eius molestiae exercitationem impedit assumenda est, iure saepe voluptatem distinctio ullam itaque voluptatum consequatur aspernatur maxime. Voluptatum iure dolorem rerum, molestiae natus tenetur, aspernatur porro nisi, cum culpa fugit? Velit cumque voluptates eveniet officia, error hic tempore, aut iusto molestias, laborum labore magni culpa maiores dolorum neque nam? Fugiat ut dolore vero minus!</p>
+</body>
+</html>

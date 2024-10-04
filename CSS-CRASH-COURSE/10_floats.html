@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Floats</title>
+    <style>
+        .container{
+            /* no background color seen because container only includes float elements (which jump out of normal flow) and browser shows as if its 0px tall */
+            background-color: #ccc;
+            /* boerders are attached to each other: container is 0px tall */
+            border-top: 20px solid blue;
+            border-bottom: 20px solid black;
+            /* 1. set overflow: auto. now container recognizes its child elements and get back its height */
+            /* 2. or create another child element (clear) and assign clear: both */
+            /* 3. or assign clearfix to container class and use after pseudo element which creates content after element */
+            overflow: auto;
+        }
+        .left{
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .right{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+
+        /* .clear{
+            clear: both;
+        } */
+
+        .clearfix::after{
+            /* create empty content and assign as block level element */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

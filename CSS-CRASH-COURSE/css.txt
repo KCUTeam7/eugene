@@ -1,0 +1,146 @@
+CSS: Cascading Style Sheets
+optional but makes webpage looks nice
+
+in-line method: assing to each HTML element style attribute
+internal method: write css code inside html document
+    <style>
+        selector {
+            
+        }
+    </style>
+external method: create brand new file which has extension .CSS
+    link in header of HTML file
+    <header>
+        <link rel="stylesheet" href="filename.css">
+    </header>
+
+was to access an element in css
+- use tag name as selector
+- put . infront when selecting a class
+- put # infront when selecting an id
+
+execution of CSS code happens line by line to bottom --> can be overwritten
+however if you select elements more specifically, that code block will have priority
+- prescedence: id > class > element name, parent element
+- id attribute can select multiple elements but we use class attribute to select several elements and id attribute to select one
+
+selecting colors
+- color name: red, blue, green...
+- rgb(red, green, blue)
+- rgba(red, green, blue, intensity)
+    intensity can be between 0 and 1
+- hexadecimal: 
+    #ff0000: red
+    #00ff00: green
+    #0000ff: blue
+
+by default paragraph is a block level element and text align property works with block level elements but not with in line elements
+- block level: take up full weight that is availiable on the page
+- in line elements: take up width that is required to display content of an element
+to transform paragraph to in line element
+p {
+    display: inline;
+}
+now the text align property doesn't work but we can manipulate it using the parent element --> wrap with <div> and apply on div
+
+Fonts
+two families
+- Generic: group of font families with similar look
+    - Serif: have small lines at the end of some characters
+    - Sans-Serif
+    - Cursive: hand writing effect
+    - Monospace
+    - Fantasy
+- Font
+    - Serif - Times New Roman, Georgia
+    - Sans-Serif - Helvitica
+    - Cursive - Brush Script, Mistral
+    - Monospace - Courier New, Lucida Bright
+
+if you don't define font family for your website, broswer will use its default font family
+
+go to google fonts to choose --> copy link and past it inside head element or import it in style element (copy & paste from google fonts)
+
+Box model: used when we deal with layout of elements
+generally all html elements can be considered as 
+members of box model
+    - content: text or images. you can manage its size with width and height
+    - padding: clears area around content, transparent
+    - border: goes around content and padding like a wrapper. default border is invisible but we can define its style using css properties
+    - margin: clear area around boarder, transparent
+
+two main types of element: block level and inline
+block level element takes up full width that is availiable
+in line elements take up width that is required to display content of element
+
+Pseudo classes and Pseudo elements
+- Pseudo classes: define special state of an element. use one column
+    makes webpage more dynamic
+    if you are going to use multiple pseudo classes for one element, you need to protect order
+        e.g. for <a>, write in the order of link > visited > hover > active
+- Pseudo elements: define specific part of an element. use two columns
+    create additional content for element and style them
+
+Measurement units
+- Absolute: px, cm, mm, in, pt, prescedence
+    - 1px = 1/96inch
+- Relative: em, rem, vw, vh, %
+    if we change font size in browser settings font size on the page will be changed accordingly
+    - em: if font size is not defined to any of its parent elements, by default its calculated according to your root html
+    - rem: calculated according to html element and parent element does not matter
+    - %: calculated according to the closest parent element
+    - vh: % of the viewport (size of the tab) height
+    - vw: % of the viewport (size of the tab) width
+
+
+Positions
+- Static
+    - elements have static position by default and thier position according to the normal flow of the page
+    - not affected by top, left, right, bottom properties
+    - we can change positions of elements using margins, floats, flexbox, and css grid
+- Relative: position relative to its normal position
+    - able to move element by top, left, right, bottom properties
+- Absolute: relative to closest parent element
+    - element jumps out of normal flow of the page so we can manage moving the elements on the entire page without breaking other element's normal flow
+    - if ancestor elements have static positions, then element always moves according to body element
+- Fixed: relative to the viewport
+    - element jumpts out of normal flow
+- Sticky: remain sticked to the top of the page with specified margin as we scroll and remain until its parent element is out of sight
+    - need to define top position of the element
+
+We can control which element should be on top of others using z index
+By default we have index properties set as 0 and higher value will be placed on the top
+
+Floats
+float property allows you to take an element our from the normal flow of the page and place it as far to the left / right of the containing element as possible
+use width property to indicate how wide the float should be. if you don't the result will be inconsistent and the box will take up the full width of the containing element like its in normal flow
+
+Shadow
+text shadow and box shadow
+
+Transition
+- transition-property: define which element to add effec to
+- transition-duration: how long we want transition to continue
+- transition-delay (optional): delayed time of effect
+- transition-timing-fuction (optional): specifies different speeds of effects while transition happens
+    - ease: slow start - fast - slow end
+    - ease-in: slow start
+    - ease-out: slow end
+    - ease-in-out: slow start and end
+    - cubic-bezier(): https://cubic-bezier.com/#.17,.67,.83,.67
+
+Transformation
+- 2d
+    - translate(X, Y): move elements horizontally and vertically
+        - translateX(): move elements horizontally (x axis) 
+        - translateY(): move elements vertically (y axis)
+    - rotate(90deg): rotate clockwise 90 degrees
+        - rotateX(deg)
+        - rotateY(deg)
+    - scale(width, height): inc/dec size of element by scale
+        - scaleX(): scale width
+        - scaleY(): scale height
+    - skey(Xdeg, Ydeg): skew element
+        - skewX(30deg): skew element horizontally by 30 degrees
+- 3d
+    - rotateZ(deg)
