@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            background-color: #ddd;
+            margin: 40px auto;
+            display: grid;
+            /* height of container is not defined so it takes up height required to display content of row */
+            grid-template-rows: repeat(2, 1fr); 
+            grid-template-columns: repeat(3, 1fr); /* repeats 1fr 2 times */
+            grid-gap: 30px 50px;
+        }
+
+        .item{
+            padding: 30px;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .item-1{
+            background-color: orangered;
+            /* inspect firefox to see column and row lines */
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        .item-2{
+            background-color: olivedrab;
+            /* grid-column: 2/3;
+            grid-row: 2/3; */
+            grid-area: 2/2/3/3;
+            z-index: 10;
+        }
+
+        .item-3{
+            background-color: royalblue;
+            grid-column: 1/-1; /* -1: to the end */
+            /* won't take up the third row because it wasn't created initially and was automatically added */
+            grid-row: 1/-1;
+        }
+
+        .item-4{
+            background-color: palevioletred;
+        }
+
+        .item-5{
+            background-color: goldenrod;
+        }
+
+        .item-6{
+            background-color: blueviolet;
+            /* occupy 3 cells from line 1 */
+            grid-column: 1 / span 3;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.item.item-${item $}*6 -->
+    <div class="container">
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+        <div class="item item-4">item 4</div>
+        <div class="item item-5">item 5</div>
+        <div class="item item-6">item 6</div>
+    </div>
+</body>
+</html>

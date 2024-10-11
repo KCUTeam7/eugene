@@ -13,3 +13,11 @@ Grid container and grid items
 - grid track
     - horizonal grid track: row
     - vertical grid track: col
+- grid cell: single unit of css grid
+- grid area: any area surrounded by 4 grid lines (can contain many gid cells)
+
+Open with firefox and inspect to see grid lines 
+
+fractional unit (fr)
+- special measurement created for css grid
+- helps us divide fractions in availiable space
