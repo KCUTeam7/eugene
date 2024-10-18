@@ -1,0 +1,33 @@
+DOM (Document Object Model) is a cross platform and language independent model for representing and interacting with elements in HTML document
+- specifies how JS can access and update the content of the webpage
+- not a part of HTML or JS, it is a separate set of rules and cannot work without a document
+- when you create a webpage and load it in a browser the DOM is named automatically
+- document is represented by a family tree
+    describes relationships between family members; parent, child, sibling
+    - <html>
+        - <head>
+            - <title>
+            - <meta>
+        - <body>
+            - <p>
+            - <ul>
+                - <li>
+                - <li>
+            - <h1>
+- DOM is a collection of nodes. Everything in HTML document in a node
+    <html> is parent node, <head> and <body> are child nodes
+
+    <p class="par">This is Paragraph</p>
+    - element nodes: p element
+    - text nodes: This is Paragraph
+    - attribute nodes: class attribute
+
+Select and manipulate items
+- id attribute should always be unique - otherwise we can't select specific element
+- document.getElementById('id');
+- innerHTML property returns the whole html content not just the text
+- document.querySelector(): returns element in document that matches the specified selector
+    document.querySelector('ul');       // tag name
+    document.querySelector('#list');    // id
+    document.querySelector('.list');    // class
+- document.querySelectorAll(): returns all elements in document that matches the specified selector

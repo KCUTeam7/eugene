@@ -1,0 +1,73 @@
+Variables
+- var
+    can start the variable name with _ and $
+    cannot use - in variable name
+- let
+- const
+    need to assign value (initialize) at the time of declaration
+
+Data types
+- almost everything is object in js
+- 5 types of primitives: string, number, boolean, undefined, null
+- String: store text and manipulate
+    can use single quote or double quote
+- undefined: variable has been declared but was not assigned a value
+- null: assignment value
+
+Operators
+- +, -, *, /
+- ==: doesn't compare the datatypes of values
+    10 == '10' will return true
+    true == 1 will return true
+    false == 0 will return true
+- ===: compares datatypes and values
+    true === 1 returns false
+    5 === 5 returns true
+    5 === 5 === 5 returns false (compares true === 5)
+- != : not equals considering values
+- !== : not equals considering datatypes and values
+
+Type Coercion
+- +: adding number and string will concatenate two values, producing a string
+- *: multiplying number and string will convert string to number, producing a number
+- 'a' + 10 + 15 --> 'a1015'
+- 10 + 15 + 'a' --> '25a'
+
+Conditional Statements
+logical operators
+- &&: and
+- ||: or
+- !(condition): not condition
+
+Functions
+function passExam(name, score){
+    return '';
+}
+
+Arrow Functions
+const multiply = (x, y) => x*y;
+const oneparam = x => x*10;
+    don't use brackets when using one parameter
+const noparam = () => 5*10;
+    don't use brackets when using no parameter
+
+Arrays
+const arr = ['Ann', 'Bob', 'John', 10, true, [1, 2, 3]];
+- arr.push('Jake');     // add at the end of array
+- arr.pop();            // remove last item of array
+- arr.shift();          // remove first itme of array
+- arr.unshift('Bob')    // remove Bob from array
+- arr.indexOf('red')    // return index of item. -1 if the item doesn't exist
+
+Objects
+const person = {};
+- declaring properties
+    person.firstname = 'John';
+    person['lastname'] = 'Smith';
+    person.son = {
+        name: 'Nick'
+    };
+    person.son.age = 5;
+- accessing property: person.firstname
+
+Loops
